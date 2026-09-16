@@ -141,7 +141,7 @@ export const Navbar: React.FC = () => {
             className="nav-register-btn"
             aria-label="Register Pass"
           >
-            <span>Register</span>
+            <span>REGISTER</span>
             <span className="arrow" style={{ fontSize: '0.85rem' }}>→</span>
           </SpecularButton>
 
