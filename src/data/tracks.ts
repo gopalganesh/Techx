@@ -1,19 +1,13 @@
-export type TrackStatus = 'COMING_SOON' | 'OPEN' | 'CLOSED';
-export type TrackCategory = 'TECH' | 'TRAIN';
-
 export interface Track {
   id: string;
   posterSlug: string;
   num: string;
   name: string;
   title: string;
-  category: TrackCategory;
+  kicker: string;
   description: string;
-  badge: string;
-  competition?: string;
-  competitionDescription?: string;
-  image?: string;
-  status: TrackStatus;
+  isCommon?: boolean;
+  commonLabel?: string;
   registrationEnabled: boolean;
   registrationLink: string;
 }
@@ -25,12 +19,8 @@ export const tracksData: Track[] = [
     num: "01",
     name: "TRACK 1",
     title: "TRACK 1",
-    category: "TECH",
-    description: "Intensive coding sprints, system building, and practical technical labs.",
-    badge: "TECH / SPRINT",
-    competition: "Day 2 CodeSprint Challenge",
-    competitionDescription: "Build and deploy prototypes evaluated by industry judges.",
-    status: "OPEN",
+    kicker: "TRACK 01",
+    description: "Specialized technical track focusing on advanced software architecture, systems engineering, and scalable technical implementation.",
     registrationEnabled: true,
     registrationLink: "/register?track=track-1"
   },
@@ -40,12 +30,8 @@ export const tracksData: Track[] = [
     num: "02",
     name: "TRACK 2",
     title: "TRACK 2",
-    category: "TECH",
-    description: "Intensive coding sprints, system building, and practical technical labs.",
-    badge: "TECH / SPRINT",
-    competition: "Day 2 CodeSprint Challenge",
-    competitionDescription: "Build and deploy prototypes evaluated by industry judges.",
-    status: "OPEN",
+    kicker: "TRACK 02",
+    description: "Specialized technical track focusing on emerging tech stacks, applied problem-solving, and building production-grade solutions.",
     registrationEnabled: true,
     registrationLink: "/register?track=track-2"
   },
@@ -55,12 +41,10 @@ export const tracksData: Track[] = [
     num: "03",
     name: "TALK SESSION",
     title: "TALK SESSION",
-    category: "TECH",
-    description: "Expert sessions on ADAS, AI in Healthcare, and future tech.",
-    badge: "TECH / TALKS",
-    competition: "Day 2 Technical Ideathon",
-    competitionDescription: "Present and defend innovative engineering applications.",
-    status: "OPEN",
+    kicker: "COMMON SESSION",
+    isCommon: true,
+    commonLabel: "Common for Track 1 & Track 2",
+    description: "Insightful keynote and interactive technical presentations featuring industry leaders on emerging technologies, engineering roadmaps, and career growth.",
     registrationEnabled: false,
     registrationLink: ""
   },
@@ -70,12 +54,10 @@ export const tracksData: Track[] = [
     num: "04",
     name: "NANO MENTORING",
     title: "NANO MENTORING",
-    category: "TRAIN",
-    description: "1-on-1 personalized mentoring with industry professionals.",
-    badge: "TRAIN / MENTORING",
-    competition: "Day 2 Portfolio Spotlight",
-    competitionDescription: "Personalized portfolio reviews and career roadmaps.",
-    status: "OPEN",
+    kicker: "COMMON SESSION",
+    isCommon: true,
+    commonLabel: "Common for Track 1 & Track 2",
+    description: "Personalized 1-on-1 and small-group mentoring pods with seasoned tech professionals for technical guidance, portfolio review, and career navigation.",
     registrationEnabled: false,
     registrationLink: ""
   }

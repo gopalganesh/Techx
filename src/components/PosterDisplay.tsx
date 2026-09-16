@@ -34,7 +34,7 @@ export const PosterDisplay: React.FC<PosterDisplayProps> = ({
         <div className="poster-placeholder-content">
           <span className="poster-placeholder-tag">[ TECHX REIGNITE ]</span>
           <h4 className="poster-placeholder-title">{poster?.title || 'SESSION POSTER'}</h4>
-          <span className="poster-placeholder-status">POSTER AVAILABLE SOON</span>
+          <span className="poster-placeholder-status">OFFICIAL POSTER PENDING</span>
         </div>
       </div>
     );
